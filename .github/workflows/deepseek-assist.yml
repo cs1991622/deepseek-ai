@@ -1,5 +1,4 @@
 # .github/workflows/deepseek-assist.yml
-pip install -r requirements.txt
 name: DeepSeek Code Assistant
 
 on:
