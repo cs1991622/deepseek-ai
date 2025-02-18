@@ -1,5 +1,11 @@
-# 设置GitHub Secrets
-DEEPSEEK_API_KEY=sk-a6eba5aac549471babca28ae98a95f25
+import os
+
+DEEPSEEK_API_KEY = os.getenv('sk-a6eba5aac549471babca28ae98a95f25')
+
+if DEEPSEEK_API_KEY is None:
+    raise ValueError("DEEPSEEK_API_KEY is not set")
+
+# Your code that uses DEEPSEEK_API_KEY
 
 import os
 
