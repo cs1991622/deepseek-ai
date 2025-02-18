@@ -1,6 +1,6 @@
 import os
 
-DEEPSEEK_API_KEY = os.getenv('sk-a6eba5aac549471babca28ae98a95f25')
+DEEPSEEK_API_KEY = os.getenv(sk-a6eba5aac549471babca28ae98a95f25)
 
 if DEEPSEEK_API_KEY is None:
     raise ValueError("DEEPSEEK_API_KEY is not set")
