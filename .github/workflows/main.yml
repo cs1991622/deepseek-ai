@@ -1,0 +1,26 @@
+# .github/workflows/main.yml
+name: AI Code Assistant
+
+on: [push]
+
+jobs:
+  code-assist:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 增加写入权限
+      pull-requests: write
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Run AI Assistant
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      run: |
+        python src/main.py --event=push
